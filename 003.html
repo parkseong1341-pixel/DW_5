@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 사각형의 밑변과 높이를 이용하여 넓이를 계산하여 출력하는 함수
+    // 함수명 : rectArea
+    // 매개변수 : 2개
+    function calc(){
+      let bottom = document.getElementById("bottom").value;
+      let height = document.getElementById("height").value;
+      let rectArea = Number(bottom) * Number(height);
+
+      document.getElementById("result").innerHTML = rectArea;
+    } 
+
+   // 3과목(국어, 수학, 영어)의 총점과 평균을 구하여 출력 하는 함수
+   // 함수명 : grade
+   // 매개변수 3개
+    function calc(){
+     let kr = document.getElementById("korean").value;
+     let mat = document.getElementById("math").value;
+     let eng = document.getElementById("english").value;
+     let grade = (Number(kr)+Number(mat)+Number(eng))/3;
+
+     document.getElementById("average").innerHTML = parseInt(grade);
+    }
+
+    function grade(k, m, e){ 
+     let total = k + m + e;
+     let avg = parseInt(total / 3);
+     document.write(`총점 : ${total}, 평균 : ${avg}`)
+    }
+    grade(88,99,40);
+
+
+
+
+
+
+    
+    function print(text){
+      document.write(`<div>${text}</div>`);
+    }
+    function rectArea(w, h){
+      print(`${Number(w)} * ${Number(h)} 넓이`)
+    }
+    rectArea(10, 10)
+
+
+    //아래의 코드를 작성하고 올바르게 실행 될 수 있게 함수를 만들어보세요!
+    function hi(name){
+      print(`안녕, ${name}!`)
+    }
+
+    hi("이순신"); // 화면 출력은       안녕, 이순신!
+    hi("김정원"); // 화면 출력        안녕, 김정원!
+    hi("박승찬"); // 화면 출력        안녕, 박승찬! 
+
+    
+
+    
+  </script>
+</head>
+<body>
+  <div>
+  <a href="javascript:calc();">계산</a>
+  <input type="number" id="bottom" placeholder="bottom">
+  <input type="number" id="height" placeholder="height">
+  </div>
+  <div style="border: 1px solid black; width:100px ;padding:10px" id="result"></div>
+
+  <div style="margin-top:20px">
+    <a href="javascript:calc();">계산</a>
+    <input type="number" id="korean"><input type="number" id="math"><input type="number" id="english">
+  </div>
+  <div style="border: 1px solid black; width:100px ;padding:10px" id="average"></div>
+
+  
+</body>
+</html>

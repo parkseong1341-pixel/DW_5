@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let coin = 1;
+    let res = ( coin === 1 ) ? "앞면" : "뒷면"
+    console.log(res);
+//2번문제
+    let item1 = 12000;
+    let item2 = 3500;
+    let item3 = 8000;
+    let total = item1 + item2 + item3;
+
+    total >= 20000 ? "무료배송" : "배송비 3000원 추가";
+
+    console.log(total)
+//3번문제
+    let num = Math.random()
+    console.log(num);
+//parseInt는 정수 값만 나오게 함.
+    let num1 = parseInt(Math.random()*10) + 1;
+    console.log(num1);
+
+    res = (num1 % 2) === 1 ? "홀수" : "짝수";
+    console.log(res);
+// %는 나머지 값까지 구해준다.
+
+//5번문제
+   let word = "i like banana"
+   //백틱(탬플릿 문자열);
+   console.log(`너는 어떤 과일을 "좋아하니?" <div class="box"> ${word}`)
+
+   //문자열 길이;
+   console.log(word.length);
+
+   //문자열의 특정 문자 출력
+   console.log( word[0] );
+   console.log( word.charAt(4) );
+
+   //문자열 거꾸로
+   console.log(word.split(" "));
+   console.log(word.split("").reverse().join(""));
+
+   //문자열 다루기 심화
+   let fullName = "홍길동"
+   console.log(`"안녕하세요. 저는 ${fullName}입니다."`)
+   console.log(`"이름의 길이는 ${fullName.length}입니다."`)
+   console.log(`"성은 ${fullName[0]}입니다."`)
+   console.log(fullName.split("").reverse())
+
+   let fullName1 = "이순신"
+   //body안에 들어감
+   document.write(`"안녕하세요. 저는 <b>${fullName1}</b>입니다."`)
+   
+   document.writeln(`<div>"문자열의 길이 -> <b style="font-size:20px; color:green; font-weight:bold">${fullName1.length}</b>"</div>`)
+
+   document.writeln(`<div>"성은 ${fullName1.charAt(0)}입니다."</div>`);
+   document.writeln("aa");
+   document.writeln("aa");
+   document.write(`${fullName1.split("").reserve().join("")}`);
+
+   //document.writeln text안에서 줄바꿈 해주는
+
+   //홍길동 학생의 성적 구하기
+   //3과목 성적구하기 (총점, 평균)
+   let kor = 45, mat = 68, eng = 92, his = 77, sci = 99;
+   let totalScore = kor + mat + eng + his + sci;
+
+   //이순신 학생의 성적
+   kor = 45; mat = 98; eng = 72;
+   totalScore = kor + mat + eng;
+
+   //박문수 학생의 성적
+   kor = 90; mat = 28; eng = 92;
+   totalScore = kor + mat + eng;
+
+  </script>
+
+</head>
+<body>
+  
+</body>
+</html>
